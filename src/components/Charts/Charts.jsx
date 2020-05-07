@@ -13,9 +13,8 @@ const Charts = () => {
             setDailyData(await fetchDailyData());
         }
 
-        console.log(dailyData);
         fetchAPI();
-    });
+    },[setDailyData]);
 
     const lineChart = (
         dailyData[0] ? (
